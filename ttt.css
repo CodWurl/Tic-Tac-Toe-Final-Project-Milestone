@@ -152,3 +152,22 @@ body {
 .winning-message.show {
 	display: flex;
 }
+
+.background-image{
+	background: url("https://ae01.alicdn.com/kf/HTB17bTcy25TBuNjSspcq6znGFXaY/Fantasy-Space-Universe-Nebula-Scenery-Portrait-Photography-Backgrounds-Custom-Photographic-Backdrops-For-Photo-StudioXT-6794.jpg_Q90.jpg_.webp");
+	background-color: black;
+	background-size: 1333px;
+}
+
+h1{
+	color: rgb(144, 225, 22) ;
+	font-weight: bold;
+	
+}
+
+p{
+	color:aqua;
+	font-weight: bold;
+}
+
+  
