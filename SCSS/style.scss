@@ -1,0 +1,213 @@
+$color_1: #fff;
+$color_2: white;
+$color_3: rgb(144, 225, 22);
+$color_4: aqua;
+$font-family_1: Helvetica;
+$background-color_1: #34495e;
+$background-color_2: black;
+$background-color_3: lightgrey;
+$background-color_4: white;
+$background-color_5: rgba(0, 0, 0, .9);
+$border-color_1: white;
+
+console.log(convertData('01-20-1969')) {
+	* {
+		box-sizing: border-box;
+	}
+}
+* {
+	&::after {
+		box-sizing: border-box;
+	}
+	&::before {
+		box-sizing: border-box;
+	}
+}
+&:root {
+	--cell-size: 100px;
+	--mark-size: calc(var(--cell-size) * .9);
+}
+body {
+	margin: 0;
+}
+.board {
+	width: 400px;
+	height: 400px;
+	margin: 0 auto;
+	background-color: $background-color_1;
+	color: $color_1;
+	border: 6px solid #2c3e50;
+	border-radius: 10px;
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+.box {
+	border: 6px solid #2c3e50;
+	border-radius: 2px;
+	font-family: $font-family_1;
+	font-weight: bold;
+	font-size: 4em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:first-child {
+		border-top: none;
+	}
+	&:nth-child(2) {
+		border-top: none;
+	}
+	&:nth-child(3) {
+		border-top: none;
+	}
+	&:nth-child(3n {
+		+ {
+			1) {
+				border-left: none;
+			}
+			3) {
+				border-right: none;
+			}
+		}
+	}
+	&:last-child {
+		border-bottom: none;
+	}
+	&:nth-child(8) {
+		border-bottom: none;
+	}
+	&:nth-child(7) {
+		border-bottom: none;
+	}
+}
+.box.x {
+	cursor: not-allowed;
+	&::before {
+		background-color: $background-color_2;
+		content: '';
+		position: absolute;
+		width: calc(var(--mark-size) * .15);
+		height: var(--mark-size);
+		transform: rotate(45deg);
+	}
+	&::after {
+		background-color: $background-color_2;
+		content: '';
+		position: absolute;
+		width: calc(var(--mark-size) * .15);
+		height: var(--mark-size);
+		transform: rotate(-45deg);
+	}
+}
+.box.circle {
+	cursor: not-allowed;
+	&::before {
+		background-color: $background-color_2;
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		width: var(--mark-size);
+		height: var(--mark-size);
+	}
+	&::after {
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		width: calc(var(--mark-size) * .7);
+		height: calc(var(--mark-size) * .7);
+		background-color: $background-color_4;
+	}
+}
+.board.x {
+	.box {
+		&:not(.x) {
+			&:not(.circle) {
+				&:hover {
+					&::before {
+						background-color: $background-color_3;
+						content: '';
+						position: absolute;
+						width: calc(var(--mark-size) * .15);
+						height: var(--mark-size);
+						transform: rotate(45deg);
+					}
+					&::after {
+						background-color: $background-color_3;
+						content: '';
+						position: absolute;
+						width: calc(var(--mark-size) * .15);
+						height: var(--mark-size);
+						transform: rotate(-45deg);
+					}
+				}
+			}
+		}
+	}
+}
+.board.circle {
+	.box {
+		&:not(.x) {
+			&:not(.circle) {
+				&:hover {
+					&::before {
+						background-color: $background-color_3;
+						content: '';
+						position: absolute;
+						border-radius: 50%;
+						width: var(--mark-size);
+						height: var(--mark-size);
+					}
+					&::after {
+						content: '';
+						position: absolute;
+						border-radius: 50%;
+						width: calc(var(--mark-size) * .7);
+						height: calc(var(--mark-size) * .7);
+						background-color: $background-color_4;
+					}
+				}
+			}
+		}
+	}
+}
+.winning-message {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $background-color_5;
+	justify-content: center;
+	align-items: center;
+	color: $color_2;
+	font-size: 5rem;
+	flex-direction: column;
+	button {
+		font-size: 3rem;
+		background-color: $background-color_4;
+		border: 1px solid black;
+		padding: .25em .5em;
+		cursor: pointer;
+		&:hover {
+			background-color: $background-color_2;
+			color: $color_2;
+			border-color: $border-color_1;
+		}
+	}
+}
+.winning-message.show {
+	display: flex;
+}
+.background-image {
+	background: url("https://ae01.alicdn.com/kf/HTB17bTcy25TBuNjSspcq6znGFXaY/Fantasy-Space-Universe-Nebula-Scenery-Portrait-Photography-Backgrounds-Custom-Photographic-Backdrops-For-Photo-StudioXT-6794.jpg_Q90.jpg_.webp");
+	background-color: $background-color_2;
+	background-size: 1333px;
+}
+h1 {
+	color: $color_3;
+	font-weight: bold;
+}
+p {
+	color: $color_4;
+	font-weight: bold;
+}
