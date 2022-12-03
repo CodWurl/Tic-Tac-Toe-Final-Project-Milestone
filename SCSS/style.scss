@@ -1,3 +1,5 @@
+@import "style.css";
+
 $color_1: #fff;
 $color_2: white;
 $color_3: rgb(144, 225, 22);
@@ -10,20 +12,20 @@ $background-color_4: white;
 $background-color_5: rgba(0, 0, 0, .9);
 $border-color_1: white;
 
-console.log(convertData('01-20-1969')) {
+
 	* {
 		box-sizing: border-box;
 	}
-}
+
 * {
-	&::after {
+	::after {
 		box-sizing: border-box;
 	}
-	&::before {
+	::before {
 		box-sizing: border-box;
 	}
 }
-&:root {
+:root {
 	--cell-size: 100px;
 	--mark-size: calc(var(--cell-size) * .9);
 }
@@ -59,16 +61,7 @@ body {
 	&:nth-child(3) {
 		border-top: none;
 	}
-	&:nth-child(3n {
-		+ {
-			1) {
-				border-left: none;
-			}
-			3) {
-				border-right: none;
-			}
-		}
-	}
+	
 	&:last-child {
 		border-bottom: none;
 	}

@@ -1,0 +1,17 @@
+/* Error: expected selector.
+ *    ,
+ * 13 | console.log(convertData("01-20-1969")){
+ *    |            ^
+ *    '
+ *   scss\style.scss 13:12  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected selector.\a    \2577 \a 13 \2502  console.log(convertData("01-20-1969")){\d\a    \2502             ^\a    \2575 \a   scss\\style.scss 13:12  root stylesheet';
+}
